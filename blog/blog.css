@@ -83,10 +83,11 @@ footer {
 
     .book-details {
         text-align: left;
-        margin-right: 0;
+        
     }
     
     .book-details img {
         margin-left: 30%;
     }
+
 }
