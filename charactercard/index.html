@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charactercard</title>
+    <link rel="stylesheet" href="charactercard.css">
+    <script src="charactercard.js" defer></script>
+
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
@@ -26,6 +29,25 @@
                         
 </head>
 <body>
-    
+
+    <div class="card">
+
+        <img id="image" class="image">
+
+        <h2 id="name" class="name"></h2>
+
+        <div class="stats">
+            <p><strong>Class:</strong> <span id="class"></span></p>
+            <p><strong>Level:</strong> <span id="level"></span></p>
+            <p><strong>Health:</strong> <span id="health"></span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="attack-btn">Attack</button>
+            <button id="level-btn">Level Up</button>
+        </div>
+
+    </div>
+
 </body>
 </html>
