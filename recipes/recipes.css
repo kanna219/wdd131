@@ -1,0 +1,200 @@
+/* ==========================================
+   1. ベーススタイル（モバイルデフォルト）
+   ========================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 15px; /* 上下の余白を少し広げました */
+    background-color: #fff;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+}
+
+/* --- ヘッダー（拡大） --- */
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px; /* 下との間隔を広げました */
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area img {
+    height: 60px; /* 45px -> 60px に拡大 */
+    width: auto;
+}
+
+.logo-area h1 {
+    font-size: 3.8rem; /* 2.8rem -> 3.8rem に大幅拡大 */
+    letter-spacing: 2px;
+}
+
+/* --- 検索バー（拡大 ＆ 縦線修正） --- */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center; /* 中の要素を縦中央に */
+    border: 1.5px solid #333; /* 線を少し太く */
+    border-radius: 3px;
+    padding: 6px 12px; /* 内側の余白を広げて大きく */
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.3rem; /* 1rem -> 1.3rem に拡大 */
+    padding: 6px;
+}
+
+/* 検索ボタンと中の縦線をきれいに調整 */
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 15px; /* 縦線と虫眼鏡の間のスペース */
+    border-left: 1.5px solid #b5b5b5; /* ボタンの左側にきれいな縦線を表示 */
+}
+
+.search-btn img {
+    height: 28px; /* 20px -> 28px に虫眼鏡を拡大 */
+    width: auto;
+    display: block;
+}
+
+/* 検索バーとレシピの間の線 */
+hr {
+    border: none;
+    height: 2px; 
+    background-color: #b5b5b5;
+    margin-bottom: 30px; /* 線の下の余白 */
+}
+
+/* --- レシピカード (モバイル・拡大) --- */
+.recipe-card {
+    border: 1.5px solid #333; /* 見本に合わせて少し濃く太く */
+    border-radius: 4px;
+    padding: 16px; /* 中の余白を広げました */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category-tag {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 3px 10px;
+    font-size: 1rem; /* 少し大きく */
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.recipe-details h2 {
+    font-size: 2.8rem; /* 2.2rem -> 2.8rem に拡大 */
+    color: #2b7bb9;
+    margin-bottom: 6px;
+}
+
+.rating {
+    font-size: 1.2rem; /* 星のサイズを少し大きく */
+}
+
+/* モバイルデバイスでは説明文を非表示 */
+.recipe-details .description {
+    display: none;
+}
+
+/* --- フッター (モバイル) --- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+
+.attribution {
+    font-size: 0.85rem; /* 少し大きく */
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social img {
+    width: 28px; /* 22px -> 28px にアイコンを拡大 */
+    height: 28px;
+}
+
+
+/* ==========================================
+   2. ラージデバイス用スタイル (画面幅が広いとき)
+   ========================================== */
+@media (min-width: 650px) {
+    .container {
+        max-width: 800px; /* 全体の幅を 750px -> 800px に少し拡大 */
+    }
+
+    .search-box {
+        margin-bottom: 35px;
+    }
+
+    /* レシピカードの中身を横並びに */
+    .recipe-card {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px; /* PCではさらに余白を広く */
+        gap: 24px;
+    }
+
+    .recipe-image {
+        flex: 1;
+    }
+
+    .recipe-details {
+        flex: 1.3; /* テキスト側の比率を少し上げました */
+    }
+
+    /* 大画面になったら説明文を表示 */
+    .recipe-details .description {
+        display: block;
+        font-size: 1.1rem; /* 0.95rem -> 1.1rem に拡大 */
+        line-height: 1.5;
+        margin-top: 16px;
+        color: #444;
+    }
+
+    /* フッター：左右両端に配置 */
+    footer {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: 50px auto 0 auto;
+    }
+}
