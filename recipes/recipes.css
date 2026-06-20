@@ -1,24 +1,22 @@
-/* ==========================================
-   1. ベーススタイル（モバイルデフォルト）
-   ========================================== */
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px 15px; /* 上下の余白を少し広げました */
+    margin: 10px;
+    padding: 20px 15px; 
     background-color: #fff;
     color: #333;
 }
 
 h1, h2 {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Amatic SC';
     margin: 0;
 }
 
-/* --- ヘッダー（拡大） --- */
+/* --- header --- */
 header {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px; /* 下との間隔を広げました */
+    margin-bottom: 25px;
 }
 
 .logo-area {
@@ -28,16 +26,18 @@ header {
 }
 
 .logo-area img {
-    height: 60px; /* 45px -> 60px に拡大 */
+    height: 110px;
     width: auto;
 }
 
 .logo-area h1 {
-    font-size: 3.8rem; /* 2.8rem -> 3.8rem に大幅拡大 */
+    font-size: 4rem;
     letter-spacing: 2px;
+    color: black;
+    margin-top: 5%;
 }
 
-/* --- 検索バー（拡大 ＆ 縦線修正） --- */
+/* --- search box --- */
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -45,22 +45,21 @@ header {
 
 .search-box {
     display: flex;
-    align-items: center; /* 中の要素を縦中央に */
-    border: 1.5px solid #333; /* 線を少し太く */
+    align-items: center; 
+    border: 2px solid #333; 
     border-radius: 3px;
-    padding: 6px 12px; /* 内側の余白を広げて大きく */
-    margin-bottom: 25px;
+    padding: 2px;
+    margin-bottom: 15px;
 }
 
 .search-box input {
     flex: 1;
     border: none;
     outline: none;
-    font-size: 1.3rem; /* 1rem -> 1.3rem に拡大 */
-    padding: 6px;
+    font-size: 1.3rem; 
+    padding: 4px;
 }
 
-/* 検索ボタンと中の縦線をきれいに調整 */
 .search-btn {
     background: none;
     border: none;
@@ -68,32 +67,31 @@ header {
     display: flex;
     align-items: center;
     height: 100%;
-    padding-left: 15px; /* 縦線と虫眼鏡の間のスペース */
-    border-left: 1.5px solid #b5b5b5; /* ボタンの左側にきれいな縦線を表示 */
+    border-left: 1.5px solid #b5b5b5;
+    padding-right: 0;
 }
 
 .search-btn img {
-    height: 28px; /* 20px -> 28px に虫眼鏡を拡大 */
-    width: auto;
+    height: 2rem;
     display: block;
+    margin-right: 0;
 }
 
-/* 検索バーとレシピの間の線 */
 hr {
     border: none;
-    height: 2px; 
+    height: 1.8px; 
     background-color: #b5b5b5;
-    margin-bottom: 30px; /* 線の下の余白 */
+    margin-bottom: 15px;
 }
 
-/* --- レシピカード (モバイル・拡大) --- */
+/* --- recipe card --- */
 .recipe-card {
-    border: 1.5px solid #333; /* 見本に合わせて少し濃く太く */
+    border: 2px solid black;
     border-radius: 4px;
-    padding: 16px; /* 中の余白を広げました */
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 5px; 
 }
 
 .recipe-image img {
@@ -104,40 +102,41 @@ hr {
 
 .category-tag {
     display: inline-block;
-    border: 1px solid #333;
-    padding: 3px 10px;
-    font-size: 1rem; /* 少し大きく */
-    margin-bottom: 10px;
-    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 1rem;
+    margin-bottom: 35px;
+    background-color: #ededed;
 }
 
 .recipe-details h2 {
-    font-size: 2.8rem; /* 2.2rem -> 2.8rem に拡大 */
-    color: #2b7bb9;
+    font-size: 2.8rem; 
+    color: #3e9ae0;
     margin-bottom: 6px;
 }
 
 .rating {
-    font-size: 1.2rem; /* 星のサイズを少し大きく */
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 7px;
 }
 
-/* モバイルデバイスでは説明文を非表示 */
 .recipe-details .description {
     display: none;
 }
 
-/* --- フッター (モバイル) --- */
+/* --- footer --- */
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: 40px;
-    padding-top: 10px;
+    margin-top: 30px;
 }
 
 .attribution {
-    font-size: 0.85rem; /* 少し大きく */
+    font-size: 0.85rem;
     color: #0000ee;
     text-decoration: underline;
 }
@@ -148,28 +147,38 @@ footer {
 }
 
 .social img {
-    width: 28px; /* 22px -> 28px にアイコンを拡大 */
+    width: 28px; 
     height: 28px;
 }
 
 
-/* ==========================================
-   2. ラージデバイス用スタイル (画面幅が広いとき)
-   ========================================== */
+
 @media (min-width: 650px) {
     .container {
-        max-width: 800px; /* 全体の幅を 750px -> 800px に少し拡大 */
+        max-width: 800px;
+    }
+
+    header {
+       margin-bottom: 40px;
+    }
+
+    .logo-area img {
+    height: 130px;
+    }
+
+    .logo-area h1 {
+        font-size: 5rem;
+        margin-top: 10%;
     }
 
     .search-box {
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
 
-    /* レシピカードの中身を横並びに */
     .recipe-card {
         flex-direction: row;
         align-items: flex-start;
-        padding: 24px; /* PCではさらに余白を広く */
+        padding: 24px; 
         gap: 24px;
     }
 
@@ -178,23 +187,22 @@ footer {
     }
 
     .recipe-details {
-        flex: 1.3; /* テキスト側の比率を少し上げました */
+        flex: 1; 
     }
 
-    /* 大画面になったら説明文を表示 */
     .recipe-details .description {
         display: block;
-        font-size: 1.1rem; /* 0.95rem -> 1.1rem に拡大 */
+        font-size: 0.9rem; 
         line-height: 1.5;
-        margin-top: 16px;
-        color: #444;
+        margin-top: 0px;
+        color: black;
     }
+    
 
-    /* フッター：左右両端に配置 */
     footer {
         flex-direction: row-reverse;
         justify-content: space-between;
         max-width: 800px;
-        margin: 50px auto 0 auto;
+        margin: 20px auto 0 auto;
     }
 }
