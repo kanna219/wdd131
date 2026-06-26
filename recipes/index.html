@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
     <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,35 +39,16 @@
             <h1>RECIPEBOOK</h1>
         </div>
     </header>
-    <main class="container">
+    <main id="container">
         <div class="search-box">
-            <input type="text" placeholder="Find a recipe" id="searchInput">
+            <input type="text" placeholder="Find a recipe" id="search-input">
             <button type="button" class="search-btn">
                 <img src="images/search.svg" alt="Search">
             </button>
         </div>
         <hr>
-        <div class="recipe-card">
-            <div class="recipe-image">
-                <img src="images/apple-crisp.jpg" alt="Apple Crisp">
-            </div>
-            
-            <div class="recipe-details">
-                <span class="category-tag">dessert</span>
-                <h2>Apple Crisp</h2>
-                
-                <div class="rating-area">
-                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">☆</span>
-                    </span>
-                </div>
-                
-                <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
+        <div id="recipe-container">
+
         </div>
     </main>
     
