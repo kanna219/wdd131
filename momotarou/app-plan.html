@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Momotarou battle game Project Plan</h1>
+			<h2>Kanna Murakami</h2>
+			<h2>WDD 131.01</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>The purpose of this web application is to provide a simple, turn-based battle with monster(Oni) game based on famous Japanese fairytale "Momotarou".</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>The audience is mainly children and adults who are familiar with "Momotarou" story.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<ul>
+				<li><strong>Event Listeners</strong>: With buttons for "Attack" and "Heal", user can choose thier action each time.</li>
+				<li><strong>Object & Arrays</strong>: Character states(HP, attackpower) will be managed as Objects, and team members will be stored in an Array.</li>
+				<li><strong>Array Method (forEach)</strong>: A forEach loop will be used when the player eats a "Kibi-dango" (healing item) to loop through all party members and display a text log showing that everyone's health is restored.</li>
+                <li><strong>Conditional</strong>: JavaScript will constantly check game states, such as player or enemy defeat conditions, and will dynamically change the character's image to a "damaged" version depending on their remaining HP.</li>
+                <li><strong>DOM</strong>: The log section, HP meters, and character images will update immediately on the screen after every action.</li>
+			</ul>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="images/logo.png" alt="Logo image" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c"
+				target="_blank"
+				>https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">[#0E232E]</td>
+						<td class="secondary">[#FFF4D7]</td>
+						<td class="accent1">[#DC7F8A]</td>
+						<td class="accent2">[#6E7F55]</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				
+                1. Create an object for the player team and the enemy (Oni) with properties for name, HP, and available items.<br />
+                2. Create an array to hold the names of the party members for random selection.<br />
+                3. Display the initial state of the game, including character images and HP meters using a forEach loop.<br />
+                4. Add event listeners to the "Attack" and "Heal" buttons.<br />
+                5. When "Attack" is clicked, randomly select a member from the array to deal damage to the enemy and update its HP.<br />
+                6. When "Heal" is clicked, restore the team's HP, consume an item, and use forEach to display a log showing that everyone is energized.<br />
+                7. After each action, the enemy will counterattack if it is still alive.<br />
+                8. Check the current HP to dynamically change the character's image if their health gets low.<br />
+                9. Update the log section and repeat the process until either the enemy or the player is defeated.
+			</p>
+
+			<h3>Wireframes</h3>
+			<p>
+				Create wireframes for your project page(s). One for each page and list them
+				here. 
+			</p>
+
+			<img src="images/wireframe.png" alt="wireframe for larger size"/>
+            <img src="images/wireframe_mobile.png" alt="wireframe for mobile"/>
+
+		</main>
+	</body>
+</html>

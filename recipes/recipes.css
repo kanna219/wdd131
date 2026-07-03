@@ -155,7 +155,7 @@ footer {
 
 @media (min-width: 650px) {
     body {
-        padding: 5% 10%;
+        margin: 5% 10%;
     }
 
     .container {
